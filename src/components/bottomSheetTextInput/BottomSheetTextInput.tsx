@@ -1,4 +1,4 @@
-import React, { memo, useCallback, forwardRef, useEffect } from 'react';
+import { memo, useCallback, forwardRef, useEffect } from 'react';
 import { TextInput } from 'react-native-gesture-handler';
 import { useBottomSheetInternal } from '../../hooks';
 import type { BottomSheetTextInputProps } from './types';

@@ -1,4 +1,4 @@
-import React, { memo, useContext, useMemo } from 'react';
+import { memo, useContext, useMemo } from 'react';
 import { RefreshControl, RefreshControlProps } from 'react-native';
 import {
   Gesture,

@@ -1,4 +1,4 @@
-import React, {
+import {
   useMemo,
   useCallback,
   forwardRef,
@@ -651,12 +651,7 @@ const BottomSheetComponent = forwardRef<BottomSheet, BottomSheetProps>(
 
         _providedOnAnimate(animatedCurrentIndex.value, toIndex, source);
       },
-      [
-        _providedOnAnimate,
-        animatedSnapPoints,
-        animatedClosedPosition,
-        animatedCurrentIndex,
-      ]
+      [_providedOnAnimate, animatedClosedPosition, animatedCurrentIndex]
     );
     //#endregion
 

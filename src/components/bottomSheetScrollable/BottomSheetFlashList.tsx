@@ -2,6 +2,7 @@ import * as React from 'react';
 import {
   FlashList as ShopifyFlashList,
   FlashListProps,
+  // @ts-ignore flash-list is a peer dependency, it exists in the project
 } from '@shopify/flash-list';
 import { SCROLLABLE_TYPE } from '../../constants';
 import { createBottomSheetScrollableComponent } from './createBottomSheetScrollableComponent';

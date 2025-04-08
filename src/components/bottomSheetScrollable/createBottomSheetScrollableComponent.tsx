@@ -1,9 +1,4 @@
-import React, {
-  forwardRef,
-  useContext,
-  useImperativeHandle,
-  useMemo,
-} from 'react';
+import { forwardRef, useContext, useImperativeHandle, useMemo } from 'react';
 import { useAnimatedProps, useAnimatedStyle } from 'react-native-reanimated';
 import { Gesture } from 'react-native-gesture-handler';
 import { BottomSheetDraggableContext } from '../../contexts/gesture';

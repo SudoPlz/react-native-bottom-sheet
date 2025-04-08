@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useRef } from 'react';
+import { useCallback, useMemo, useRef } from 'react';
 import { useSharedValue } from 'react-native-reanimated';
 import { PortalProvider } from '@gorhom/portal';
 import {

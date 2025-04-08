@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { View } from 'react-native';
 import type { BottomSheetBackgroundProps } from './types';
 import { styles } from './styles';
