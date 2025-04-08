@@ -59,7 +59,7 @@
     "react": "~16.9.0",
     "react-native": "^0.62.2",
     "react-native-builder-bob": "^0.18.1",
-    "react-native-gesture-handler": "^1.10.3",
+    "react-native-gesture-handler": "^2.5.0",
     "react-native-reanimated": "^3.4.2",
     "release-it": "^17.0.1",
     "typescript": "^5.0.3"
@@ -70,8 +70,8 @@
     "@shopify/flash-list": "*",
     "react": "*",
     "react-native": "*",
-    "react-native-gesture-handler": ">=1.10.1",
-    "react-native-reanimated": ">=2.2.0"
+    "react-native-gesture-handler": ">=2.5.0",
+    "react-native-reanimated": ">=3.4.2"
   },
   "peerDependenciesMeta": {
     "@types/react-native": {
