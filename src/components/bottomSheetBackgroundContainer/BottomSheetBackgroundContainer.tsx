@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from 'react';
+import { memo, useMemo } from 'react';
 import BottomSheetBackground from '../bottomSheetBackground';
 import type { BottomSheetBackgroundContainerProps } from './types';
 import { styles } from './styles';

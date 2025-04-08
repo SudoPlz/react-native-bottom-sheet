@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from 'react';
+import { memo, useMemo } from 'react';
 import Animated from 'react-native-reanimated';
 import { styles } from './styles';
 import type { BottomSheetDefaultHandleProps } from './types';

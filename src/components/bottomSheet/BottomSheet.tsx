@@ -1,4 +1,4 @@
-import React, {
+import {
   useMemo,
   useCallback,
   forwardRef,
@@ -19,8 +19,8 @@ import Animated, {
   runOnUI,
   cancelAnimation,
   useWorkletCallback,
-  WithSpringConfig,
-  WithTimingConfig,
+  type WithSpringConfig,
+  type WithTimingConfig,
 } from 'react-native-reanimated';
 import { State } from 'react-native-gesture-handler';
 import {
@@ -78,7 +78,7 @@ import {
   DEFAULT_DYNAMIC_SIZING,
   DEFAULT_ACCESSIBLE,
   DEFAULT_ACCESSIBILITY_LABEL,
-  DEFAULT_ACCESSIBILITY_ROLE
+  DEFAULT_ACCESSIBILITY_ROLE,
 } from './constants';
 import type { BottomSheetMethods, Insets } from '../../types';
 import type { BottomSheetProps, AnimateToPositionType } from './types';
@@ -627,7 +627,11 @@ const BottomSheetComponent = forwardRef<BottomSheet, BottomSheetProps>(
       [_providedOnChange, animatedCurrentIndex]
     );
     const handleOnAnimate = useCallback(
-      function handleOnAnimate(toPoint: number, source: ANIMATION_SOURCE, snapPoints: number[]) {
+      function handleOnAnimate(
+        toPoint: number,
+        source: ANIMATION_SOURCE,
+        snapPoints: number[]
+      ) {
         const closedPosition = animatedClosedPosition.value;
         const toIndex =
           toPoint === closedPosition ? -1 : snapPoints.indexOf(toPoint);
@@ -647,12 +651,7 @@ const BottomSheetComponent = forwardRef<BottomSheet, BottomSheetProps>(
 
         _providedOnAnimate(animatedCurrentIndex.value, toIndex, source);
       },
-      [
-        _providedOnAnimate,
-        animatedSnapPoints,
-        animatedClosedPosition,
-        animatedCurrentIndex,
-      ]
+      [_providedOnAnimate, animatedClosedPosition, animatedCurrentIndex]
     );
     //#endregion
 
@@ -1706,13 +1705,15 @@ const BottomSheetComponent = forwardRef<BottomSheet, BottomSheetProps>(
                   // isScrollableRefreshable,
                   // animatedScrollableContentOffsetY,
                   // keyboardState,
-                  // animatedIndex,
-                  // animatedCurrentIndex,
-                  // animatedPosition,
-                  animatedContainerHeight,
-                  animatedSheetHeight,
-                  animatedHandleHeight,
-                  animatedContentHeight,
+                  animatedIndex,
+                  animatedCurrentIndex,
+                  animatedPosition,
+                  animatedHandleGestureState,
+                  animatedContentGestureState,
+                  // animatedContainerHeight,
+                  // animatedSheetHeight,
+                  // animatedHandleHeight,
+                  // animatedContentHeight,
                   // // keyboardHeight,
                   // isLayoutCalculated,
                   // isContentHeightFixed,
